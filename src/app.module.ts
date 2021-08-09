@@ -6,9 +6,8 @@ import { LoadCarsOperationsService } from "./load-cars-operations/load-cars-oper
 import { TypeOrmModule } from "@nestjs/typeorm";
 import { Connection, getConnectionOptions } from "typeorm";
 import { TestconrollerController } from './testconroller/testconroller.controller';
-import { LoadCarsModule } from './load-cars/load-cars.module';
-import { Car } from "./Car/car.entity";
-import { Operation } from "./Operation/operation.entity";
+import { Car } from "./cars/car.entity";
+import { Operation } from "./operations/operation.entity";
 import { CarsModule } from './cars/cars.module';
 import { OperationsModule } from './operations/operations.module';
 import { LoadCarsOperationsModule } from './load-cars-operations/load-cars-operations.module';
@@ -33,7 +32,6 @@ import { LoadCarsOperationsModule } from './load-cars-operations/load-cars-opera
       ]
     }
   ),
-    LoadCarsModule,
     CarsModule,
     OperationsModule,
     LoadCarsOperationsModule,

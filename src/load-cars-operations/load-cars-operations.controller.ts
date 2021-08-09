@@ -7,12 +7,14 @@ export class LoadCarsOperationsController {
     private readonly loadCarsOperationService: LoadCarsOperationsService
 
   ) {}
+
   @Get()
   findAll(): string {
     return 'This action returns all cats';
   }
+
   @Post()
   loadCars(): string {
-    return this.loadCarsOperationService.loadCars();
+    return this.loadCarsOperationService.loadCar();
   }
 }
