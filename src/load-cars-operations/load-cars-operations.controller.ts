@@ -1,5 +1,6 @@
-import { Controller, Get, Post } from '@nestjs/common';
+import { Controller, Get, Post, Req } from "@nestjs/common";
 import { LoadCarsOperationsService } from './load-cars-operations.service';
+import { Request } from "express";
 
 @Controller('load-cars-operations')
 export class LoadCarsOperationsController {
@@ -14,7 +15,7 @@ export class LoadCarsOperationsController {
   }
 
   @Post()
-  loadCars(): string {
-    return this.loadCarsOperationService.loadCar();
+  loadCars(@Req() request: Request): string {
+    return this.loadCarsOperationService.loadCars(request);
   }
 }
