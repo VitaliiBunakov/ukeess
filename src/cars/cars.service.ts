@@ -12,6 +12,17 @@ export class CarsService {
     private connection: Connection
   ) {
   }
+  async find (vin) {
+    let result;
+    try {
+      let promise = await this.carsRepository.find({where : {vin : vin}});
+
+      result = await promise;
+    } catch (err) {
+      console.log(err);
+    }
+    return result;
+  }
 
   async findCar(id) {
     let result;
@@ -29,8 +40,6 @@ export class CarsService {
   async createCar(car) {
     let res;
     try {
-      console.log("*************creating Car : ****************");
-      console.log(car);
       res = await this.carsRepository.save(car);
     } catch (err){
       console.log(err);

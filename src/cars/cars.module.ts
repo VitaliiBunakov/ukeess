@@ -4,8 +4,14 @@ import { Car } from "./car.entity";
 import { TypeOrmModule } from "@nestjs/typeorm";
 
 @Module({
-  imports: [TypeOrmModule.forFeature([Car])],
+  imports: [
+    TypeOrmModule.forFeature([Car])
+
+  ],
   providers: [CarsService],
-  exports: [CarsService]
+  exports: [
+    CarsService,
+
+  ]
 })
 export class CarsModule {}

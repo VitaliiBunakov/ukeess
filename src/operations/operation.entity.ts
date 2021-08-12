@@ -1,6 +1,6 @@
 import { Entity, Column, PrimaryGeneratedColumn, PrimaryColumn } from "typeorm";
 
-@Entity()
+@Entity("operations")
 export class Operation {
 
   @PrimaryGeneratedColumn()
@@ -9,7 +9,7 @@ export class Operation {
   @Column({ type: "varchar", width: 200 })
   person: string;
 
-  @Column({ type: "int", width: 200 })
+  @Column({ type: "int", width: 10 })
   reg_addr_koatuu: number;
 
   @Column({ type: "int", width: 200 })

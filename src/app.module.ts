@@ -11,6 +11,8 @@ import { Operation } from "./operations/operation.entity";
 import { CarsModule } from './cars/cars.module';
 import { OperationsModule } from './operations/operations.module';
 import { LoadCarsOperationsModule } from './load-cars-operations/load-cars-operations.module';
+import { FilesModule } from './files/files.module';
+import { TestconrollerModule } from './testconroller/testconroller.module';
 
 
 @Module({
@@ -38,6 +40,9 @@ import { LoadCarsOperationsModule } from './load-cars-operations/load-cars-opera
     CarsModule,
     OperationsModule,
     LoadCarsOperationsModule,
+    FilesModule,
+    TestconrollerModule,
+    Car
 
   ],
   controllers: [AppController, LoadCarsOperationsController, TestconrollerController],
