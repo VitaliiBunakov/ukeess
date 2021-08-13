@@ -20,6 +20,7 @@ export class LoadCarsOperationsService {
 
   // @ts-ignore
   loadCars(file): string {
+    console.log(`got file : ${file.originalname}`);
     try {
       fs.writeFile(path.join(__dirname, "../..", "files_tmp", file.originalname),
         file.buffer.toString("utf8"),
@@ -74,6 +75,7 @@ export class LoadCarsOperationsService {
 
         })
         .on("end", function() {
+          console.log('Job is done');
 
         });
     }catch (err){
